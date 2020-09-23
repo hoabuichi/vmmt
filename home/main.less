@@ -17,20 +17,30 @@ body {
     
     .slick-arrow {
         &.slick-prev {
-            left: 13px;
             z-index: 1;
 
             &:before {
                 font-size: 40px;
+                content: '';
+                background: url(https://w.ladicdn.com/v2/source/ladi-icons.svg) rgba(255,255,255,.2) no-repeat;
+                background-position: -28px;
+                width: 30px;
+                height: 36px;
+                display: flex;
             }
         }
 
         &.slick-next {
-            right: 33px;
             z-index: 1;
 
             &:before {
                 font-size: 40px;
+                content: '';
+                background: url(https://w.ladicdn.com/v2/source/ladi-icons.svg) rgba(255,255,255,.2) no-repeat;
+                background-position: -52px;
+                width: 30px;
+                height: 36px;
+                display: flex;
             }
         }
     }
@@ -208,6 +218,20 @@ body {
 .main-products {
     padding-top: 50px;
     padding-bottom: 50px;
+
+    .slick-slider {
+    
+        .slick-arrow {
+            &.slick-prev {
+                left: 9px;
+            }
+    
+            &.slick-next {
+                right: 20px;
+            }
+        }
+    }
+
     .title {
         color: #0a4f9d;
         position: relative;
@@ -314,6 +338,20 @@ body {
 .main-projects {
     padding-top: 50px;
     padding-bottom: 50px;
+
+    .slick-slider {
+    
+        .slick-arrow {
+            &.slick-prev {
+                left: 9px;
+            }
+    
+            &.slick-next {
+                right: 20px;
+            }
+        }
+    }
+
     .title {
         color: #0a4f9d;
         position: relative;
@@ -566,6 +604,16 @@ body {
 
 .news-section {
     margin-bottom: 50px;
+
+    .slick-slider {
+    
+        .slick-arrow {
+    
+            &.slick-next {
+                right: -15px;
+            }
+        }
+    }
     .news-container {
         padding: 50px 20px;
         background-color: white;
