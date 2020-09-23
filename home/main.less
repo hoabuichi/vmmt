@@ -4,6 +4,9 @@
     font-family: 'Roboto', sans-serif;
 }
 
+@mediaIpad: 991px;
+@mediaPhone: 767px;
+
 body {
     background-color: #f8f8f8;
 }
@@ -79,9 +82,117 @@ body {
         align-items: center;
         justify-content: space-between;
 
+        @media(max-width: @mediaIpad) {
+            display: block;
+            height: 140px;
+
+            figure {
+                display: flex;
+                justify-content: center;
+                border-bottom: 1px solid #d8d4d4;
+                padding: 10px 0;
+                margin: 0;
+
+                img {
+                    width: 47px;
+                    height: 55px;
+                }
+            }
+        }
+
         .nav-section {
             display: flex;
-            ul {
+
+            .background-overlay-mobile {
+                display: none;
+
+                @media(max-width: @mediaIpad) {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    background-color: black;
+                    opacity: 0.7;
+                    position: fixed;
+                    top: 0;
+                    left: -100%;
+                    z-index: 9;
+                }
+            }
+
+            .mobile-nav {
+                display: none;
+
+                @media(max-width: @mediaIpad) {
+                    display: inline-block;
+                }
+            }
+
+            .mobile-nav-content {
+                display: none;
+
+                @media(max-width: @mediaIpad) {
+                    display: block;
+                    position: fixed;
+                    top: 0;
+                    left: -100%;
+                    width: 70%;
+                    width: 285px;
+                    background-color: white;
+                    z-index: 10;
+                    padding: 50px 20px;
+                    height: 100%;
+                    box-shadow: 1px 0px 7px #bdbdbd;
+
+                    .close-icon {
+                        background: url(https://w.ladicdn.com/v2/source/ladi-icons.svg) rgba(255,255,255,.2) no-repeat;
+                        background-position: -108px;
+                        width: 30px;
+                        height: 30px;
+                        position: absolute;
+                        top: 5px;
+                        right: 5px;
+                    }
+
+                    .search-container {
+                        display: flex;
+                        margin-bottom: 15px;
+
+                        input {
+                            height: 36px;
+                            border-radius: 5px;
+                            border: 1px solid grey;
+                            padding-left: 10px;
+                        }
+
+                        .search-icon {
+                            display: inline-block;
+                            padding: 0;
+                            border: none;
+                            margin-left: 10px;
+                        }
+                    }
+
+                    ul {
+                        list-style: none;
+
+                        li {
+                            margin-bottom: 10px;
+                            a {
+                                color: #05224a;
+                                font-size: 18px;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+            }
+
+            @media(max-width: @mediaIpad) {
+                display: block;
+                padding: 12px 0;
+            }
+
+            ul.desktop {
                 list-style: none;
                 display: flex;
                 margin-bottom: 0;
@@ -97,12 +208,20 @@ body {
                         font-weight: bold;
                     }
                 }
+
+                @media(max-width: @mediaIpad) {
+                    display: none;
+                }
             }
 
             .search-icon {
                 border-right: 1px solid #06234c33;
                 padding: 0 20px;
                 align-self: center;
+
+                @media(max-width: @mediaIpad) {
+                    display: none;
+                }
             }
 
             .hotline-btn {
@@ -115,6 +234,10 @@ body {
                 margin-left: 20px;
                 font-size: 14px;
                 height: 40px;
+
+                @media(max-width: @mediaIpad) {
+                    float: right;
+                }
             }
         }
     }
@@ -128,6 +251,10 @@ body {
     background-repeat: repeat;
     height: 717px;
     position: relative;
+
+    @media(max-width: @mediaPhone) {
+        height: 400px;
+    }
 
     .background-banner {
         background: linear-gradient(180deg, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1.0));
@@ -145,6 +272,18 @@ body {
         bottom: 50px;
         left: 50%;
         transform: translateX(-50%);
+
+        @media(max-width: @mediaPhone) {
+            width: 100%;
+            font-size: 30px;
+            padding: 0 15px;
+            bottom: 10px;
+
+            svg {
+                width: 20px;
+                height: 23px;
+            }
+        }
     }
 }
 
@@ -157,6 +296,11 @@ body {
     background-repeat: no-repeat;
     position: relative;
 
+    @media(max-width: @mediaPhone) {
+        height: auto;
+        padding: 20px;
+    }
+
     .background-section {
         background-color: #073a91b3;
         height: 208px;
@@ -164,6 +308,10 @@ body {
         position: absolute;
         top: 0;
         left: 0;
+
+        @media(max-width: @mediaPhone) {
+            height: 100%;
+        }
     }
 
     .container {
@@ -180,6 +328,18 @@ body {
             align-items: center;
             height: 130px;
             width: 100%;
+
+            @media(max-width: @mediaPhone) {
+                grid-template-columns: 1fr 1fr;
+                height: auto;
+                grid-gap: 20px;
+
+                .advantage {
+                    &.bordered {
+                        border-right: none !important;
+                    }
+                }
+            }
 
             .advantage {
                 display: flex;
@@ -238,6 +398,10 @@ body {
         text-align: center;
         margin-bottom: 40px;
         font-size: 34px;
+
+        @media(max-width: @mediaPhone) {
+            font-size: 25px;
+        }
 
         &:before {
             content: "";
@@ -339,6 +503,10 @@ body {
     padding-top: 50px;
     padding-bottom: 50px;
 
+    @media(max-width: @mediaPhone) {
+        padding-top: 0;
+    }
+
     .slick-slider {
     
         .slick-arrow {
@@ -358,6 +526,10 @@ body {
         text-align: center;
         margin-bottom: 40px;
         font-size: 34px;
+
+        @media(max-width: @mediaPhone) {
+            font-size: 25px;
+        }
 
         &:before {
             content: "";
@@ -438,6 +610,10 @@ body {
     height: 855px;
     position: relative;
 
+    @media(max-width: @mediaIpad) {
+        height: auto;
+    }
+
     .background-overlay {
         height: 100%;
         width: 50%;
@@ -450,6 +626,10 @@ body {
         position: absolute;
         top: 0;
         left: 0;
+
+        @media(max-width: @mediaIpad) {
+            display: none;
+        }
     }
 
     .reasons {
@@ -462,11 +642,22 @@ body {
         top: 80px;
         padding: 50px;
 
+        @media(max-width: @mediaIpad) {
+            width: 100%;
+            height: auto;
+            position: static;
+        }    
+
         .title {
             color: #0a4f9d;
             position: relative;
             margin-bottom: 40px;
             font-size: 34px;
+
+            @media(max-width: @mediaPhone) {
+                font-size: 25px;
+                margin-bottom: 70px;
+            }
     
             &:before {
                 content: "";
@@ -483,6 +674,12 @@ body {
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-gap: 50px 20px;
+
+
+            @media(max-width: @mediaPhone) {
+                grid-template-columns: 1fr;
+                grid-gap: 20px;
+            }
 
             .reason {
                 .head-reason {
@@ -549,6 +746,10 @@ body {
             margin-bottom: 40px;
             font-size: 34px;
             text-align: center;
+
+            @media(max-width: @mediaPhone) {
+                font-size: 25px;
+            }
     
             &:before {
                 content: "";
@@ -567,6 +768,10 @@ body {
             font-weight: bold;
             text-align: center;
             line-height: 1.4;
+
+            @media(max-width: @mediaPhone) {
+                padding: 0 15px;
+            }
         }
 
         .hotline {
@@ -576,6 +781,10 @@ body {
             text-align: center;
             line-height: 1.4;
             margin: 20px 0 10px;
+
+            @media(max-width: @mediaPhone) {
+                font-size: 22px;
+            }
         }
 
         .email {
@@ -584,6 +793,10 @@ body {
             font-weight: bold;
             text-align: center;
             line-height: 1.4;
+
+            @media(max-width: @mediaPhone) {
+                font-size: 22px;
+            }
         }
 
         .register {
@@ -598,6 +811,10 @@ body {
             border-radius: 5px;
             outline: none;
             padding: 7px 15px;
+
+            @media(max-width: @mediaPhone) {
+                font-size: 16px;
+            }
         }
     }
 }
@@ -622,6 +839,10 @@ body {
             position: relative;
             margin-bottom: 50px;
             font-size: 34px;
+
+            @media(max-width: @mediaPhone) {
+                font-size: 25px;
+            }
     
             &:before {
                 content: "";
@@ -672,12 +893,35 @@ body {
     background-color: white;
     padding: 50px 0 100px;
 
+    @media(max-width: @mediaPhone) {
+        padding: 50px 0;
+    }
+
+    .slick-slider {
+    
+        .slick-arrow {
+    
+            &.slick-next {
+                right: -10px;
+            }
+
+            &.slick-prev {
+                left: -21px;
+            }
+        }
+    }
+
     .title {
         color: #0a4f9d;
         position: relative;
         margin-bottom: 80px;
         font-size: 34px;
         text-align: center;
+
+        @media(max-width: @mediaPhone) {
+            font-size: 25px;
+            margin-bottom: 40px;
+        }
 
         &:before {
             content: "";
@@ -737,6 +981,10 @@ body {
             grid-gap: 30px 100px ;
             border-bottom: 1px solid #ffffff1a;
 
+            @media(max-width: @mediaPhone) {
+                grid-template-columns: 1fr;
+            }
+
             .links-section {
                 h3 {
                     color: white;
@@ -747,6 +995,12 @@ body {
                     line-height: 1.4;
                     height: 50px;
                     text-transform: uppercase;
+
+                    
+                    @media(max-width: @mediaIpad) {
+                        height: auto;
+                    }
+
                 }
 
                 ul {
@@ -765,6 +1019,35 @@ body {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             grid-gap: 30px;
+
+            @media(max-width: @mediaIpad) {
+                grid-template-columns: 1fr 1fr;
+
+                .map, .facebook {
+                    iframe {
+                        height: 204px;
+                    }
+                }
+
+                .register {
+                    grid-column-start: 1;
+                    grid-column-end: 3;
+                }
+            }
+
+            @media(max-width: @mediaPhone) {
+                grid-template-columns: 1fr;
+                .register {
+                    grid-column-start: 1;
+                    grid-column-end: 2;
+                }
+
+                .map, .facebook {
+                    iframe {
+                        width: 100%;
+                    }
+                }
+            }
 
             .register {
                 h3 {
@@ -785,6 +1068,7 @@ body {
                     padding-left: 10px;
                     margin-bottom: 15px;
                     font-size: 12px;
+                    display: block;
                 }
 
                 button {

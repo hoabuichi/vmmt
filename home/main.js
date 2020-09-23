@@ -1,10 +1,38 @@
-$('.products.lime').slick({
-    infinite: true,
+var slickOptions = {
+    dots: true,
+    infinite: false,
+    speed: 300,
     slidesToShow: 3,
-    autoplay: true,
     slidesToScroll: 1,
-    dots: true
-});
+    mobileFirst:true,
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 300,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+}
+
+$('.products.lime').slick(slickOptions);
 
 var selectTab = function(tab) {
     $('.products.slicked').slick("unslick");
@@ -12,34 +40,52 @@ var selectTab = function(tab) {
     $('.products').hide();
     $('.products.' + tab).show();
     $('.products.' + tab).addClass("slicked");
-    $('.products.' + tab).slick({
-        infinite: true,
-        slidesToShow: 3,
-        autoplay: true,
-        slidesToScroll: 1,
-        dots: true
-    });
+    $('.products.' + tab).slick(slickOptions);
 }
 
-$('.projects').slick({
-    infinite: true,
-    slidesToShow: 3,
-    autoplay: true,
-    slidesToScroll: 1,
-    dots: true
-});
+$('.projects').slick(slickOptions);
 
-$('.news').slick({
-    infinite: true,
-    slidesToShow: 3,
-    autoplay: true,
-    slidesToScroll: 1,
-    dots: true
-});
+$('.news').slick(slickOptions);
 
 $('.partners').slick({
-    infinite: true,
+    dots: false,
+    infinite: false,
+    speed: 300,
     slidesToShow: 6,
-    autoplay: true,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    mobileFirst:true,
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 6,
+          slidesToScroll: 1,
+          infinite: true
+        }
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 300,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      }
+    ]
 });       
+
+$(".mobile-nav").click(function() {
+  $('.mobile-nav-content').css('left', 0);
+  $('.background-overlay-mobile').css('left', 0);
+});
+
+$(".close-icon").click(function() {
+  $('.mobile-nav-content').css('left', "-100%");
+  $('.background-overlay-mobile').css('left', "-100%");
+});
