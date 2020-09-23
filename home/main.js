@@ -28,4 +28,18 @@ $('.projects').slick({
     slidesToScroll: 1,
     dots: true
 });
-          
+
+$('.news').slick({
+    infinite: true,
+    slidesToShow: 3,
+    autoplay: true,
+    slidesToScroll: 1,
+    dots: true
+});
+
+$('.partners').slick({
+    infinite: true,
+    slidesToShow: 6,
+    autoplay: true,
+    slidesToScroll: 1
+});       
