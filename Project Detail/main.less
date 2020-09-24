@@ -391,10 +391,28 @@ body {
             .tabs {
                 display: grid;
                 grid-template-columns: auto auto auto auto auto;
-                height: 42px;
+
+                @media(max-width: @mediaIpad) {
+                    grid-template-columns: auto auto;
+
+                    .order {
+                        grid-column-start: 1;
+                        grid-column-end: 3;
+                    }
+                }
+
+                @media(max-width: @mediaPhone) {
+                    grid-template-columns: auto;
+
+                    .order {
+                        grid-column-start: 1;
+                        grid-column-end: 2;
+                    }
+                }
 
                 .tab {
                     display: flex;
+                    height: 42px;
                     justify-content: center;
                     align-items: center;
                     border: 1px solid #00000033;
@@ -423,6 +441,10 @@ body {
                         grid-template-columns: 1fr 1fr;
                         grid-gap: 20px;
 
+                        @media(max-width: @mediaIpad) {
+                            grid-template-columns: 1fr;
+                        }
+
                         .video {
                             height: 292px;
 
@@ -434,6 +456,7 @@ body {
 
                         .images {
                             width: 382px;
+
                             .des-big-images {
                                 &.slick-slider {
     
@@ -489,6 +512,14 @@ body {
         }
 
         .btn-container {
+
+            @media(max-width: @mediaIpad) {
+                margin-top: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
             .project-btn {
                 min-width: 242px;
                 height: 42px;

@@ -62,7 +62,7 @@ $('.sub-big-images').slick({
     {
       breakpoint: 767,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 3,
         slidesToScroll: 1,
         centerMode: true,
         focusOnSelect: true
@@ -71,7 +71,7 @@ $('.sub-big-images').slick({
     {
       breakpoint: 300,
       settings: {
-        slidesToShow: 1,
+        slidesToShow: 3,
         slidesToScroll: 1,
         centerMode: true,
         focusOnSelect: true
@@ -94,36 +94,7 @@ $('.des-sub-big-images').slick({
   asNavFor: '.des-big-images',
   mobileFirst:true,
   centerMode: true,
-  focusOnSelect: true,
-  responsive: [
-    {
-      breakpoint: 991,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        centerMode: true,
-        focusOnSelect: true
-      }
-    },
-    {
-      breakpoint: 767,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        centerMode: true,
-        focusOnSelect: true
-      }
-    },
-    {
-      breakpoint: 300,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        centerMode: true,
-        focusOnSelect: true
-      }
-    }
-  ]
+  focusOnSelect: true
 });
 
 var changeTab = function(tab) {
