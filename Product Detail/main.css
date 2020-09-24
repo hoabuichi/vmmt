@@ -1,0 +1,649 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+body {
+  background-color: #f8f8f8;
+}
+.slick-slider {
+  display: none;
+}
+.slick-slider.slick-initialized {
+  display: block;
+}
+.slick-slider .slick-arrow.slick-prev {
+  z-index: 1;
+}
+.slick-slider .slick-arrow.slick-prev:before {
+  font-size: 40px;
+  content: '';
+  background: url(https://w.ladicdn.com/v2/source/ladi-icons.svg) rgba(255, 255, 255, 0.2) no-repeat;
+  background-position: -28px;
+  width: 30px;
+  height: 36px;
+  display: flex;
+}
+.slick-slider .slick-arrow.slick-next {
+  z-index: 1;
+}
+.slick-slider .slick-arrow.slick-next:before {
+  font-size: 40px;
+  content: '';
+  background: url(https://w.ladicdn.com/v2/source/ladi-icons.svg) rgba(255, 255, 255, 0.2) no-repeat;
+  background-position: -52px;
+  width: 30px;
+  height: 36px;
+  display: flex;
+}
+.slick-slider .slick-dots {
+  bottom: -35px;
+}
+.slick-slider .slick-dots li button:before {
+  font-size: 12px;
+  color: #848484;
+  opacity: 1;
+}
+.slick-slider .slick-dots li.slick-active button:before {
+  font-size: 16px;
+  color: #e83b30;
+  opacity: 1;
+}
+.header {
+  box-shadow: 0px 13px 10px -20px #000;
+}
+.header .header-container {
+  height: 87px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 991px) {
+  .header .header-container {
+    display: block;
+    height: 140px;
+  }
+  .header .header-container figure {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #d8d4d4;
+    padding: 10px 0;
+    margin: 0;
+  }
+  .header .header-container figure img {
+    width: 47px;
+    height: 55px;
+  }
+}
+.header .header-container .nav-section {
+  display: flex;
+}
+.header .header-container .nav-section .background-overlay-mobile {
+  display: none;
+}
+@media (max-width: 991px) {
+  .header .header-container .nav-section .background-overlay-mobile {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.7;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    z-index: 9;
+  }
+}
+.header .header-container .nav-section .mobile-nav {
+  display: none;
+}
+@media (max-width: 991px) {
+  .header .header-container .nav-section .mobile-nav {
+    display: inline-block;
+  }
+}
+.header .header-container .nav-section .mobile-nav-content {
+  display: none;
+}
+@media (max-width: 991px) {
+  .header .header-container .nav-section .mobile-nav-content {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 70%;
+    width: 285px;
+    background-color: white;
+    z-index: 10;
+    padding: 50px 20px;
+    height: 100%;
+    box-shadow: 1px 0px 7px #bdbdbd;
+  }
+  .header .header-container .nav-section .mobile-nav-content .close-icon {
+    background: url(https://w.ladicdn.com/v2/source/ladi-icons.svg) rgba(255, 255, 255, 0.2) no-repeat;
+    background-position: -108px;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
+  .header .header-container .nav-section .mobile-nav-content .search-container {
+    display: flex;
+    margin-bottom: 15px;
+  }
+  .header .header-container .nav-section .mobile-nav-content .search-container input {
+    height: 36px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    padding-left: 10px;
+  }
+  .header .header-container .nav-section .mobile-nav-content .search-container .search-icon {
+    display: inline-block;
+    padding: 0;
+    border: none;
+    margin-left: 10px;
+  }
+  .header .header-container .nav-section .mobile-nav-content ul {
+    list-style: none;
+  }
+  .header .header-container .nav-section .mobile-nav-content ul li {
+    margin-bottom: 10px;
+  }
+  .header .header-container .nav-section .mobile-nav-content ul li a {
+    color: #05224a;
+    font-size: 18px;
+    font-weight: bold;
+  }
+}
+@media (max-width: 991px) {
+  .header .header-container .nav-section {
+    display: block;
+    padding: 12px 0;
+  }
+}
+.header .header-container .nav-section ul.desktop {
+  list-style: none;
+  display: flex;
+  margin-bottom: 0;
+  align-items: center;
+}
+.header .header-container .nav-section ul.desktop li {
+  padding: 0 20px;
+  border-right: 1px solid #06234c33;
+}
+.header .header-container .nav-section ul.desktop li a {
+  color: #05224a;
+  font-size: 14px;
+  font-weight: bold;
+}
+@media (max-width: 991px) {
+  .header .header-container .nav-section ul.desktop {
+    display: none;
+  }
+}
+.header .header-container .nav-section .search-icon {
+  border-right: 1px solid #06234c33;
+  padding: 0 20px;
+  align-self: center;
+}
+@media (max-width: 991px) {
+  .header .header-container .nav-section .search-icon {
+    display: none;
+  }
+}
+.header .header-container .nav-section .hotline-btn {
+  border: none;
+  background-color: #f44025;
+  color: white;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 7px;
+  margin-left: 20px;
+  font-size: 14px;
+  height: 40px;
+}
+@media (max-width: 991px) {
+  .header .header-container .nav-section .hotline-btn {
+    float: right;
+  }
+}
+.main-banner {
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url(https://w.ladicdn.com/s1440x717/59bf4cccb1402a49c926f9f2/limestone-blocks_26692-20200423070533.png);
+  background-position: center top;
+  background-repeat: repeat;
+  height: 427px;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .main-banner {
+    height: 400px;
+  }
+}
+.main-banner .background-banner {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0), #000000);
+  height: 100%;
+}
+.main-banner .banner-text {
+  font-size: 48px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  width: 713px;
+  text-align: center;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media (max-width: 767px) {
+  .main-banner .banner-text {
+    width: 100%;
+    font-size: 30px;
+    padding: 0 15px;
+    bottom: 10px;
+  }
+  .main-banner .banner-text svg {
+    width: 20px;
+    height: 23px;
+  }
+}
+.main-product-container {
+  padding: 50px 0;
+}
+.main-product-container .product-information .title {
+  color: #0a4f9d;
+  position: relative;
+  margin-bottom: 40px;
+  font-size: 34px;
+}
+@media (max-width: 767px) {
+  .main-product-container .product-information .title {
+    font-size: 25px;
+  }
+}
+@media (max-width: 991px) {
+  .main-product-container .product-information .title {
+    margin-top: 30px;
+  }
+}
+.main-product-container .product-information .info-item {
+  display: grid;
+  grid-template-columns: 175px 1fr;
+}
+.main-product-container .product-information .info-item label {
+  color: #05224a;
+  font-size: 17px;
+  font-weight: bold;
+}
+.main-product-container .product-information .info-item label.orange-color {
+  color: #e83c30;
+  font-size: 20px;
+}
+.main-product-container .product-information .info-item p {
+  color: #05224a;
+  font-size: 17px;
+}
+.main-product-container .product-information .info-item p .sale {
+  color: #0a4f9d;
+  font-size: 23px;
+  font-weight: bold;
+}
+.main-product-container .product-information .info-item p.orange-color {
+  color: #e83c30;
+  font-weight: bold;
+  font-size: 20px;
+}
+.main-product-container .product-information .btn-container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+@media (max-width: 767px) {
+  .main-product-container .product-information .btn-container {
+    flex-direction: column;
+  }
+}
+.main-product-container .product-information .btn-container button {
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+.main-product-container .product-information .btn-container button.btn-order {
+  background-color: #e83c30;
+  margin-right: 5px;
+}
+@media (max-width: 767px) {
+  .main-product-container .product-information .btn-container button.btn-order {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+}
+.main-product-container .product-information .btn-container button.btn-contact {
+  background-color: #0a4f9d;
+}
+.main-product-container .big-images.slick-slider .slick-arrow.slick-prev {
+  left: 0;
+}
+.main-product-container .big-images.slick-slider .slick-arrow.slick-next {
+  right: 10px;
+}
+.main-product-container .big-images .image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 363px;
+  outline: none;
+}
+.main-product-container .sub-big-images {
+  margin-top: 10px;
+}
+.main-product-container .sub-big-images.slick-slider .slick-arrow.slick-prev {
+  left: 0;
+}
+.main-product-container .sub-big-images.slick-slider .slick-arrow.slick-next {
+  right: 10px;
+}
+.main-product-container .sub-big-images .image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 80px;
+  width: 80px;
+  border: 5px solid white;
+  outline: none;
+}
+.main-product-container .detail-product {
+  margin-top: 50px;
+  padding: 30px 0;
+  background-color: white;
+}
+.main-product-container .detail-product .information {
+  background-color: #efefef;
+}
+.main-product-container .detail-product .information .tabs {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+}
+@media (max-width: 991px) {
+  .main-product-container .detail-product .information .tabs {
+    grid-template-columns: auto auto;
+  }
+  .main-product-container .detail-product .information .tabs .order {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+@media (max-width: 767px) {
+  .main-product-container .detail-product .information .tabs {
+    grid-template-columns: auto;
+  }
+  .main-product-container .detail-product .information .tabs .order {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+}
+.main-product-container .detail-product .information .tabs .tab {
+  display: flex;
+  height: 42px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #00000033;
+  color: #0a4f9d;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.main-product-container .detail-product .information .tab-content {
+  padding: 20px;
+  border: 1px solid #00000033;
+  border-top: none;
+  overflow: scroll;
+}
+.main-product-container .detail-product .information .tab-content .description p {
+  color: #05224a;
+  font-size: 17px;
+}
+.main-product-container .detail-product .information .tab-content .tech-num {
+  width: 1074px;
+  height: 755px;
+  background-image: url(https://w.ladicdn.com/s1400x1100/59bf4cccb1402a49c926f9f2/o9olg6fhue20200812063217.png);
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
+  background-attachment: scroll;
+  background-origin: content-box;
+}
+.other-products {
+  padding-bottom: 50px;
+}
+.other-products .container {
+  background-color: white;
+  padding: 20px;
+}
+@media (max-width: 767px) {
+  .other-products {
+    padding-top: 0;
+  }
+}
+.other-products .slick-slider .slick-arrow.slick-prev {
+  left: 9px;
+}
+.other-products .slick-slider .slick-arrow.slick-next {
+  right: 20px;
+}
+.other-products .title {
+  color: #0a4f9d;
+  position: relative;
+  margin-bottom: 40px;
+  font-size: 34px;
+}
+@media (max-width: 767px) {
+  .other-products .title {
+    font-size: 25px;
+  }
+}
+.other-products .title:before {
+  content: "";
+  height: 7px;
+  position: absolute;
+  width: 137px;
+  background-color: #ec483f;
+  left: 0;
+  transform: translateX(0);
+  bottom: -15px;
+}
+.other-products .products .product {
+  padding: 10px;
+  height: 400px;
+  width: 400px;
+  outline: none;
+}
+.other-products .products .product .product-content {
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
+  background-attachment: scroll;
+  background-origin: content-box;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.other-products .products .product .product-content:hover .product-info .product-des {
+  display: block;
+}
+.other-products .products .product .product-content:hover .product-info .view-more {
+  display: block;
+}
+.other-products .products .product .product-content .product-info {
+  position: absolute;
+  bottom: 0;
+  padding: 15px 20px;
+  background-color: #00000080;
+  width: 100%;
+}
+.other-products .products .product .product-content .product-info .product-name {
+  margin: 0;
+  color: white;
+  text-transform: uppercase;
+}
+.other-products .products .product .product-content .product-info .product-des {
+  color: white;
+  font-size: 16px;
+  display: block;
+  display: none;
+}
+.other-products .products .product .product-content .product-info .view-more {
+  color: white;
+  display: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+}
+.footer {
+  width: 100%;
+  position: relative;
+  padding: 50px 0;
+}
+.footer .background-overlay {
+  background-size: cover;
+  background-attachment: scroll;
+  background-origin: content-box;
+  background-image: url(https://w.ladicdn.com/s1440x600/57b167c9ca57d39c18a1c57c/subscription-bg.jpg);
+  background-position: left top;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.footer .background-color {
+  background-color: #073a91b3;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.footer .container {
+  position: relative;
+  z-index: 2;
+}
+.footer .container .links-sections {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  grid-gap: 30px 100px ;
+  border-bottom: 1px solid #ffffff1a;
+}
+@media (max-width: 767px) {
+  .footer .container .links-sections {
+    grid-template-columns: 1fr;
+  }
+}
+.footer .container .links-sections .links-section h3 {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 10px;
+  line-height: 1.4;
+  height: 50px;
+  text-transform: uppercase;
+}
+@media (max-width: 991px) {
+  .footer .container .links-sections .links-section h3 {
+    height: auto;
+  }
+}
+.footer .container .links-sections .links-section ul {
+  margin-left: 15px;
+}
+.footer .container .links-sections .links-section ul li {
+  color: white;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.footer .container .contact-section {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+}
+@media (max-width: 991px) {
+  .footer .container .contact-section {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer .container .contact-section .map iframe,
+  .footer .container .contact-section .facebook iframe {
+    height: 204px;
+  }
+  .footer .container .contact-section .register {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+@media (max-width: 767px) {
+  .footer .container .contact-section {
+    grid-template-columns: 1fr;
+  }
+  .footer .container .contact-section .register {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  .footer .container .contact-section .map iframe,
+  .footer .container .contact-section .facebook iframe {
+    width: 100%;
+  }
+}
+.footer .container .contact-section .register h3 {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 10px;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+.footer .container .contact-section .register input {
+  border: none;
+  background-color: white;
+  width: 360px;
+  height: 38px;
+  padding-left: 10px;
+  margin-bottom: 15px;
+  font-size: 12px;
+  display: block;
+}
+.footer .container .contact-section .register button {
+  border: none;
+  color: white;
+  background-color: #f2430d;
+  text-transform: uppercase;
+  padding: 7px 20px;
+  font-size: 14px;
+}
+.footer .container .contact-section .register .payment {
+  padding: 5px 15px;
+  background-color: white;
+  display: inline-block;
+}
+.footer .container .contact-section iframe {
+  height: 100%;
+  width: 100%;
+}
+.footer .container .copy-right {
+  font-size: 14px;
+  color: white;
+  text-align: center;
+  font-weight: 300;
+  margin-top: 30px;
+}

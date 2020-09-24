@@ -266,15 +266,23 @@ body {
         font-weight: bold;
         text-transform: uppercase;
         color: white;
+        width: 713px;
+        text-align: center;
         position: absolute;
-        bottom: 30px;
-        left: 50px;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
 
         @media(max-width: @mediaPhone) {
-            left: 50%;
-            bottom: 30px;
+            width: 100%;
             font-size: 30px;
-            transform: translateX(-50%);
+            padding: 0 15px;
+            bottom: 10px;
+
+            svg {
+                width: 20px;
+                height: 23px;
+            }
         }
     }
 }
