@@ -345,6 +345,13 @@ body {
   text-align: center;
   margin-bottom: 40px;
   font-size: 34px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s;
+}
+.main-products .title.loaded {
+  opacity: 1;
+  transform: translateY(0);
 }
 @media (max-width: 767px) {
   .main-products .title {
@@ -373,6 +380,13 @@ body {
   text-align: center;
   margin-bottom: 40px;
   font-size: 34px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s;
+}
+.main-products .category-container .title.loaded {
+  opacity: 1;
+  transform: translateY(0);
 }
 @media (max-width: 767px) {
   .main-products .category-container .title {
@@ -479,6 +493,13 @@ body {
   text-align: center;
   margin-bottom: 40px;
   font-size: 34px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s;
+}
+.main-projects .title.loaded {
+  opacity: 1;
+  transform: translateY(0);
 }
 @media (max-width: 767px) {
   .main-projects .title {
@@ -591,6 +612,13 @@ body {
   position: relative;
   margin-bottom: 40px;
   font-size: 34px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s;
+}
+.vmmt-choosen-reasons .reasons .title.loaded {
+  opacity: 1;
+  transform: translateY(0);
 }
 @media (max-width: 767px) {
   .vmmt-choosen-reasons .reasons .title {
@@ -673,6 +701,13 @@ body {
   margin-bottom: 40px;
   font-size: 34px;
   text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s;
+}
+.section-contact .content .title.loaded {
+  opacity: 1;
+  transform: translateY(0);
 }
 @media (max-width: 767px) {
   .section-contact .content .title {
@@ -758,6 +793,13 @@ body {
   position: relative;
   margin-bottom: 50px;
   font-size: 34px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s;
+}
+.news-section .news-container .title.loaded {
+  opacity: 1;
+  transform: translateY(0);
 }
 @media (max-width: 767px) {
   .news-section .news-container .title {
@@ -819,6 +861,13 @@ body {
   margin-bottom: 80px;
   font-size: 34px;
   text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s;
+}
+.our-partners .title.loaded {
+  opacity: 1;
+  transform: translateY(0);
 }
 @media (max-width: 767px) {
   .our-partners .title {
