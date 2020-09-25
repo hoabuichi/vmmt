@@ -314,7 +314,6 @@ body {
   }
 }
 .main-contents #introduce .introduce-left .title {
-  width: 430px;
   position: relative;
   margin-bottom: 30px;
   color: #0a4f9d;
@@ -329,6 +328,7 @@ body {
 @media (max-width: 767px) {
   .main-contents #introduce .introduce-left .title {
     width: 100%;
+    text-align: center;
   }
 }
 .main-contents #introduce .introduce-left .title:before {
@@ -339,6 +339,12 @@ body {
   bottom: -15px;
   position: absolute;
   background-color: #ec483f;
+}
+@media (max-width: 767px) {
+  .main-contents #introduce .introduce-left .title:before {
+    left: 50%;
+    transform: translate(-50%);
+  }
 }
 .main-contents #introduce .introduce-left .description {
   text-align: justify;
