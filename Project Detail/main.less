@@ -296,6 +296,14 @@ body {
             position: relative;
             margin-bottom: 40px;
             font-size: 34px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s;
+
+            &.loaded {
+                opacity: 1;
+                transform: translateY(0);
+            }
     
             @media(max-width: @mediaPhone) {
                 font-size: 25px;
@@ -576,6 +584,14 @@ body {
         position: relative;
         margin-bottom: 40px;
         font-size: 34px;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 1s;
+
+        &.loaded {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
         @media(max-width: @mediaPhone) {
             font-size: 25px;
