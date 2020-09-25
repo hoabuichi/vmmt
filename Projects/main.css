@@ -275,6 +275,13 @@ body {
   text-align: center;
   margin-bottom: 40px;
   font-size: 34px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s;
+}
+.main-products .actions-container .title.loaded {
+  opacity: 1;
+  transform: translateY(0);
 }
 @media (max-width: 767px) {
   .main-products .actions-container .title {
@@ -360,6 +367,13 @@ body {
   margin-bottom: 40px;
   font-size: 34px;
   text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s;
+}
+.main-products .products .title.loaded {
+  opacity: 1;
+  transform: translateY(0);
 }
 @media (max-width: 767px) {
   .main-products .products .title {
