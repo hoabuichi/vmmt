@@ -352,7 +352,6 @@ body {
             }
 
             .title {
-                width: 430px;
                 position: relative;
                 margin-bottom: 30px;
                 color: rgb(10, 79, 157);
@@ -367,6 +366,7 @@ body {
 
                 @media (max-width: @mediaPhone) {
                     width: 100%;
+                    text-align: center;
                 }
 
                 &:before {
@@ -377,6 +377,11 @@ body {
                     bottom: -15px;
                     position: absolute;
                     background-color: #ec483f;
+
+                    @media (max-width: @mediaPhone) {
+                        left: 50%;
+                        transform: translate(-50%);
+                    }
                 }
             }
 
