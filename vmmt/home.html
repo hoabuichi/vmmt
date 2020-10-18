@@ -51,8 +51,9 @@
                     <li><a>Xuất Nhập Khẩu</a></li>
                     <li><a>Tin Tức</a></li>
                 </ul>
-                <div class="search-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="28" preserveAspectRatio="none" viewBox="0 0 1672.2646 1896.0833" class="" fill="rgba(0, 0, 0, 0.6)"> <path d="M1152 832q0-185-131.5-316.5T704 384 387.5 515.5 256 832t131.5 316.5T704 1280t316.5-131.5T1152 832zm512 832q0 52-38 90t-90 38q-54 0-90-38l-343-342q-179 124-399 124-143 0-273.5-55.5t-225-150-150-225T0 832t55.5-273.5 150-225 225-150T704 128t273.5 55.5 225 150 150 225T1408 832q0 220-124 399l343 343q37 37 37 90z"></path> </svg>
+                <div class="search-icon desktop">
+                    <svg id="searchIcon" xmlns="http://www.w3.org/2000/svg" width="25" height="28" preserveAspectRatio="none" viewBox="0 0 1672.2646 1896.0833" class="" fill="rgba(0, 0, 0, 0.6)"> <path d="M1152 832q0-185-131.5-316.5T704 384 387.5 515.5 256 832t131.5 316.5T704 1280t316.5-131.5T1152 832zm512 832q0 52-38 90t-90 38q-54 0-90-38l-343-342q-179 124-399 124-143 0-273.5-55.5t-225-150-150-225T0 832t55.5-273.5 150-225 225-150T704 128t273.5 55.5 225 150 150 225T1408 832q0 220-124 399l343 343q37 37 37 90z"></path> </svg>
+                    <input id="searchInputDesk" placeholder="Search" type="text" />
                 </div>
                 <button class="hotline-btn">Hotline: 024 3653 3533</button>
             </div>
@@ -110,8 +111,8 @@
                     <div class="categories">
                         <div class="category bordered" onclick="selectTab('lime')">VÔI</div>
                         <div class="category bordered" onclick="selectTab('steal')">THÉP</div>
-                        <div class="category bordered">THAN</div>
-                        <div class="category">QUẶNG</div>
+                        <div class="category bordered" onclick="selectTab('coal')">THAN</div>
+                        <div class="category" onclick="selectTab('quang')">QUẶNG</div>
                     </div>
                 </div>
             </div>
@@ -210,6 +211,100 @@
                         </div>
                     </div>
                 </div>
+                <div class="products coal">
+                    <div class="product">
+                        <div class="product-content" style="background-image: url('https://viettraco.com/wp-content/uploads/2014/09/png-e1474877545869.png');">
+                            <div class="product-info">
+                                <h4 class="product-name">Vôi đá 2</h4>
+                                <p class="product-des">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                <a class="view-more">Xem thêm ->></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-content" style="background-image: url('https://viettraco.com/wp-content/uploads/2014/09/png-e1474877545869.png');">
+                            <div class="product-info">
+                                <h4 class="product-name">Vôi đá</h4>
+                                <p class="product-des">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                <a class="view-more">Xem thêm ->></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-content" style="background-image: url('https://viettraco.com/wp-content/uploads/2014/09/png-e1474877545869.png');">
+                            <div class="product-info">
+                                <h4 class="product-name">Vôi đá</h4>
+                                <p class="product-des">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                <a class="view-more">Xem thêm ->></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-content" style="background-image: url('https://viettraco.com/wp-content/uploads/2014/09/png-e1474877545869.png');">
+                            <div class="product-info">
+                                <h4 class="product-name">Vôi đá</h4>
+                                <p class="product-des">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                <a class="view-more">Xem thêm ->></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-content" style="background-image: url('https://viettraco.com/wp-content/uploads/2014/09/png-e1474877545869.png');">
+                            <div class="product-info">
+                                <h4 class="product-name">Vôi đá</h4>
+                                <p class="product-des">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                <a class="view-more">Xem thêm ->></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="products quang">
+                    <div class="product">
+                        <div class="product-content" style="background-image: url('https://viettraco.com/wp-content/uploads/2014/09/png-e1474877545869.png');">
+                            <div class="product-info">
+                                <h4 class="product-name">Vôi đá 1</h4>
+                                <p class="product-des">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                <a class="view-more">Xem thêm ->></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-content" style="background-image: url('https://viettraco.com/wp-content/uploads/2014/09/png-e1474877545869.png');">
+                            <div class="product-info">
+                                <h4 class="product-name">Vôi đá</h4>
+                                <p class="product-des">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                <a class="view-more">Xem thêm ->></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-content" style="background-image: url('https://viettraco.com/wp-content/uploads/2014/09/png-e1474877545869.png');">
+                            <div class="product-info">
+                                <h4 class="product-name">Vôi đá</h4>
+                                <p class="product-des">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                <a class="view-more">Xem thêm ->></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-content" style="background-image: url('https://viettraco.com/wp-content/uploads/2014/09/png-e1474877545869.png');">
+                            <div class="product-info">
+                                <h4 class="product-name">Vôi đá</h4>
+                                <p class="product-des">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                <a class="view-more">Xem thêm ->></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-content" style="background-image: url('https://viettraco.com/wp-content/uploads/2014/09/png-e1474877545869.png');">
+                            <div class="product-info">
+                                <h4 class="product-name">Vôi đá</h4>
+                                <p class="product-des">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                <a class="view-more">Xem thêm ->></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 </div>
             </div>
         </section>
@@ -271,7 +366,7 @@
             <div class="reasons">
                 <h3 class="title">TẠI SAO LẠI CHỌN VMMT</h3>
                 <div class="list">
-                    <div class="reason">
+                    <div class="reason odd">
                         <div class="head-reason">
                             <div class="icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="35" height="40" preserveAspectRatio="none" viewBox="0 0 1536 1896.0833" class="" fill="rgba(255, 255, 255, 1.0)"> <path d="M1024 896q0-106-75-181t-181-75-181 75-75 181 75 181 181 75 181-75 75-181zm512-109v222q0 12-8 23t-20 13l-185 28q-19 54-39 91 35 50 107 138 10 12 10 25t-9 23q-27 37-99 108t-94 71q-12 0-26-9l-138-108q-44 23-91 38-16 136-29 186-7 28-36 28H657q-14 0-24.5-8.5T621 1634l-28-184q-49-16-90-37l-141 107q-10 9-25 9-14 0-25-11-126-114-165-168-7-10-7-23 0-12 8-23 15-21 51-66.5t54-70.5q-27-50-41-99l-183-27q-13-2-21-12.5T0 1005V783q0-12 8-23t19-13l186-28q14-46 39-92-40-57-107-138-10-12-10-24 0-10 9-23 26-36 98.5-107.5T337 263q13 0 26 10l138 107q44-23 91-38 16-136 29-186 7-28 36-28h222q14 0 24.5 8.5T915 158l28 184q49 16 90 37l142-107q9-9 24-9 13 0 25 10 129 119 165 170 7 8 7 22 0 12-8 23-15 21-51 66.5t-54 70.5q26 50 41 98l183 28q13 2 21 12.5t8 23.5z"></path> </svg>
@@ -280,7 +375,7 @@
                         </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam leo leo, tincidunt ac lectus vel, tincidunt scelerisque sapien. Quisque commodo orci at odio aliquet pretium</p>
                     </div>
-                    <div class="reason">
+                    <div class="reason even">
                         <div class="head-reason">
                             <div class="icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="38" height="34" preserveAspectRatio="none" viewBox="0 0 1920 1896.0833" class="" fill="rgba(255, 255, 255, 1.0)"> <path d="M593 896q-162 5-265 128H194q-82 0-138-40.5T0 865q0-353 124-353 6 0 43.5 21t97.5 42.5T384 597q67 0 133-23-5 37-5 66 0 139 81 256zm1071 637q0 120-73 189.5t-194 69.5H523q-121 0-194-69.5T256 1533q0-53 3.5-103.5t14-109T300 1212t43-97.5 62-81 85.5-53.5T602 960q10 0 43 21.5t73 48 107 48 135 21.5 135-21.5 107-48 73-48 43-21.5q61 0 111.5 20t85.5 53.5 62 81 43 97.5 26.5 108.5 14 109 3.5 103.5zM640 256q0 106-75 181t-181 75-181-75-75-181 75-181T384 0t181 75 75 181zm704 384q0 159-112.5 271.5T960 1024 688.5 911.5 576 640t112.5-271.5T960 256t271.5 112.5T1344 640zm576 225q0 78-56 118.5t-138 40.5h-134q-103-123-265-128 81-117 81-256 0-29-5-66 66 23 133 23 59 0 119-21.5t97.5-42.5 43.5-21q124 0 124 353zm-128-609q0 106-75 181t-181 75-181-75-75-181 75-181 181-75 181 75 75 181z"></path> </svg>                            </div>
@@ -288,7 +383,7 @@
                         </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam leo leo, tincidunt ac lectus vel, tincidunt scelerisque sapien. Quisque commodo orci at odio aliquet pretium</p>
                     </div>
-                    <div class="reason">
+                    <div class="reason odd">
                         <div class="head-reason">
                             <div class="icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="33" height="36" preserveAspectRatio="none" viewBox="0 0 1664 1896.0833" class="" fill="rgba(255, 255, 255, 1.0)"> <path d="M1664 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5T1321 1619q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5T301 1569q0-6 2-20l86-500L25 695Q0 668 0 647q0-37 56-46l502-73L783 73q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"></path> </svg>                            </div>
@@ -296,7 +391,7 @@
                         </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam leo leo, tincidunt ac lectus vel, tincidunt scelerisque sapien. Quisque commodo orci at odio aliquet pretium</p>
                     </div>
-                    <div class="reason">
+                    <div class="reason even">
                         <div class="head-reason">
                             <div class="icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="35" height="45" preserveAspectRatio="none" viewBox="0 0 1397.9638 1896.0833" class="" fill="rgba(255, 255, 255, 1.0)"> <path d="M1164 128q23 0 44 9 33 13 52.5 41t19.5 62v1289q0 34-19.5 62t-52.5 41q-19 8-44 8-48 0-83-32l-441-424-441 424q-36 33-83 33-23 0-44-9-33-13-52.5-41T0 1529V240q0-34 19.5-62T72 137q21-9 44-9h1048z"></path> </svg>                            </div>
@@ -304,7 +399,7 @@
                         </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam leo leo, tincidunt ac lectus vel, tincidunt scelerisque sapien. Quisque commodo orci at odio aliquet pretium</p>
                     </div>
-                    <div class="reason">
+                    <div class="reason odd">
                         <div class="head-reason">
                             <div class="icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="34" height="37" preserveAspectRatio="none" viewBox="0 0 1792 1896.0833" class="" fill="rgba(255, 255, 255, 1.0)"> <path d="M320 256q0 72-64 110v1266q0 13-9.5 22.5T224 1664h-64q-13 0-22.5-9.5T128 1632V366q-64-38-64-110 0-53 37.5-90.5T192 128t90.5 37.5T320 256zm1472 64v763q0 25-12.5 38.5T1740 1149q-215 116-369 116-61 0-123.5-22t-108.5-48-115.5-48-142.5-22q-192 0-464 146-17 9-33 9-26 0-45-19t-19-45V474q0-32 31-55 21-14 79-43 236-120 421-120 107 0 200 29t219 88q38 19 88 19 54 0 117.5-21t110-47 88-47 54.5-21q26 0 45 19t19 45z"></path> </svg>                            </div>
@@ -312,7 +407,7 @@
                         </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam leo leo, tincidunt ac lectus vel, tincidunt scelerisque sapien. Quisque commodo orci at odio aliquet pretium</p>
                     </div>
-                    <div class="reason">
+                    <div class="reason even">
                         <div class="head-reason">
                             <div class="icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="41" height="36" preserveAspectRatio="none" viewBox="0 0 24 24" class="" fill="rgba(255, 255, 255, 1.0)"> <path d="M20,6A2,2 0 0,1 22,8V19A2,2 0 0,1 20,21H4C2.89,21 2,20.1 2,19V8C2,6.89 2.89,6 4,6H8V4L10,2H14L16,4V6H20M10,4V6H14V4H10M12,9L7,14H10V18H14V14H17L12,9Z"></path> </svg>                            </div>

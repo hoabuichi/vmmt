@@ -219,6 +219,22 @@ body {
                 border-right: 1px solid #06234c33;
                 padding: 0 20px;
                 align-self: center;
+                position: relative;
+                cursor: pointer;
+
+                input {
+                    position: absolute;
+                    left: -500px;
+                    height: 45px;
+                    top: -10px;
+                    border-radius: 5px;
+                    border: 1px solid #d4d4d4;
+                    padding-left: 7px;
+                    width: 515px;
+                    display: none;
+                    box-shadow: 3px 3px 5px #cecccc;
+                    outline: none;
+                }
 
                 @media(max-width: @mediaIpad) {
                     display: none;
@@ -707,6 +723,23 @@ body {
             position: relative;
             top: 80px;
             padding: 50px;
+            overflow: hidden;
+
+            &.loaded {
+                .list {
+                    .reason {
+
+                        &.odd {
+                            transform: translateX(0);
+                        }
+    
+                        &.even {
+                            transform: translateX(0);
+                        }
+
+                    }
+                }
+            }
     
             @media(max-width: @mediaIpad) {
                 width: 100%;
@@ -756,6 +789,16 @@ body {
                 }
     
                 .reason {
+                    transition: transform 0.8s;
+
+                    &.odd {
+                        transform: translateX(-500px);
+                    }
+
+                    &.even {
+                        transform: translateX(500px);
+                    }
+                    
                     .head-reason {
                         display: flex;
                         align-items: center;

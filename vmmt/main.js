@@ -263,6 +263,25 @@ var selectProductExportTab = function(tab) {
   showTitleFunc();
 }
 
+$(document).click(function(event) { 
+  var $target = $(event.target);
+  if($target.attr('id') == 'searchIcon') {
+    $(".search-icon.desktop input").toggle();
+    return;
+  }
+  if($('#searchInputDesk').is(":visible") && $target.attr('id') != 'searchInputDesk') {
+    $('#searchInputDesk').hide();
+    $('#searchInputDesk').val('');
+  }
+});
+
+$('.search-icon.desktop input').keypress(function (e) {
+  if (e.which == 13) {
+    $('#searchInputDesk').hide();
+    $('#searchInputDesk').val('');
+  }
+});
+
 $(".mobile-nav").click(function() {
   $('.mobile-nav-content').css('left', 0);
   $('.background-overlay-mobile').css('left', 0);
@@ -311,10 +330,22 @@ let showBannerText = function() {
   }
 }
 
+let reasons = $('.reasons');
+
+let showVMMTReasons = function() {
+  for(let i = 0; i < reasons.length; i++) {
+    if(isOnScreen(reasons[i]) && !$(reasons[i]).hasClass('loaded')) {
+      $(reasons[i]).addClass('loaded');
+    }
+  }
+}
+
 showTitleFunc();
 showBannerText();
+showVMMTReasons();
 
 window.onscroll = function() {
   showTitleFunc();
   showBannerText();
+  showVMMTReasons();
 };
