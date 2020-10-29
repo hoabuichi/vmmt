@@ -222,18 +222,54 @@ body {
                 position: relative;
                 cursor: pointer;
 
-                input {
-                    position: absolute;
-                    left: -500px;
-                    height: 45px;
-                    top: -10px;
-                    border-radius: 5px;
-                    border: 1px solid #d4d4d4;
-                    padding-left: 7px;
-                    width: 515px;
+                .search-area {
+                    z-index: 101;
                     display: none;
-                    box-shadow: 3px 3px 5px #cecccc;
-                    outline: none;
+                    position: fixed;
+                    left: 50%;
+                    top: 20px;
+                    transform: translateX(-50%);
+
+                    input {
+                        height: 45px;
+                        border-radius: 5px;
+                        border: 1px solid #d4d4d4;
+                        padding-left: 7px;
+                        width: 515px;
+                        outline: none;
+                    }
+
+                    select {
+                        width: 140px;
+                        background-color: rgba(0,0,0,.15);
+                        color: #fff;
+                        border: none;
+                        margin-left: 10px;
+                        border-radius: 5px;
+                        outline: none;
+                        padding: 0 12px;
+                    }
+                }
+
+                .search-backdrop {
+                    display: none;
+                    position: fixed;
+                    z-index: 100;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: black;
+                    opacity: 0.5;
+                    cursor: auto;
+
+                    .fa-times {
+                        color: white;
+                        position: absolute;
+                        right: 20px;
+                        top: 20px;
+                        cursor: pointer;
+                    }
                 }
 
                 @media(max-width: @mediaIpad) {
@@ -509,6 +545,14 @@ body {
         .products {
     
             &.steal {
+                display: none;
+            }
+
+            &.coal {
+                display: none;
+            }
+
+            &.quang {
                 display: none;
             }
     

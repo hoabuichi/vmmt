@@ -263,21 +263,21 @@ var selectProductExportTab = function(tab) {
   showTitleFunc();
 }
 
-$(document).click(function(event) { 
-  var $target = $(event.target);
-  if($target.attr('id') == 'searchIcon') {
-    $(".search-icon.desktop input").toggle();
-    return;
-  }
-  if($('#searchInputDesk').is(":visible") && $target.attr('id') != 'searchInputDesk') {
-    $('#searchInputDesk').hide();
-    $('#searchInputDesk').val('');
-  }
+$('#searchIcon').click(function() {
+  $(".search-icon.desktop .search-area").css('display', 'flex');
+  $(".search-icon.desktop .search-backdrop").show();
+});
+
+$(".search-icon.desktop .search-backdrop .fa-times").click(function() {
+  $(".search-icon.desktop .search-area").hide();
+  $(".search-icon.desktop .search-backdrop").hide();
+  $('#searchInputDesk').val('');
 });
 
 $('.search-icon.desktop input').keypress(function (e) {
   if (e.which == 13) {
-    $('#searchInputDesk').hide();
+    $(".search-icon.desktop .search-backdrop").hide(); 
+    $(".search-icon.desktop .search-area").hide();
     $('#searchInputDesk').val('');
   }
 });
